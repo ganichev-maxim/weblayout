@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="img/favicon.png" />
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
   <header class="headding drop-shadow">
@@ -67,16 +68,21 @@
 
         <div class="about__content">
           <article class="principles about__content-item">
-              <img src="img/principles.jpg" alt="Строитель ведет работы" class="principles__img">
-              <div class="principles__content">
-                <p class="principles__desc">
-                  Принимая во&nbsp;внимание показатели успешности, перспективное планирование способствует подготовке и&nbsp;реализации новых принципов
-                </p>
+            <picture class="principles__img">
+              <source srcset="img/principles-320.jpg" media="(max-width: 320px)">
+              <source srcset="img/principles-768.jpg" media="(max-width: 768px)">
+              <img src="img/principles.jpg" alt="Строитель ведет работы">
+            </picture>
 
-                <button class="principles__btn btn">
-                  Подробнее
-                </button>
-              </div>
+            <div class="principles__content">
+              <p class="principles__desc">
+                Принимая во&nbsp;внимание показатели успешности, перспективное планирование способствует подготовке и&nbsp;реализации новых принципов
+              </p>
+
+              <button class="principles__btn btn">
+                Подробнее
+              </button>
+            </div>
           </article>
           <div class="about-right about__content-item">
             <article class="about-right__item about-right__item-1">
@@ -124,7 +130,12 @@
             </div>
           </article>
 
-          <img src="img/how.jpg" alt="Проведение консультации" class="how__img how__content-item">
+          <picture class="how__img how__content-item">
+            <source srcset="img/how-320.jpg" media="(max-width: 320px)">
+            <source srcset="img/how-768.jpg" media="(max-width: 992px)">
+            <source srcset="img/how-vertical.jpg" media="(max-width: 1024px)">
+            <img src="img/how.jpg" alt="Проведение консультации">
+          </picture>
         </div>
       </section>
 
@@ -160,7 +171,7 @@
   </main>
 
   <footer class="footer" id="footer">
-    <div class="container footer__content section">
+    <div class="container footer__content">
       <div class="footer__links">
         <img class="footer__logo" src="img/Logo-dark.svg" alt="Логотип Евклид. Проектные системы">
 
@@ -214,28 +225,32 @@
       </div>
 
       <form class="footer__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
-        <h2 class="footer__form-title">Оставить заявку</h2>
+        <div class="footer__form-content">
+          <h2 class="footer__form-title">Оставить заявку</h2>
 
-        <input class="footer__form-input" name="name" type="text" placeholder="Фамилия, имя и отчество*" required>
+          <input class="footer__form-input" name="name" type="text" placeholder="Фамилия, имя и отчество*" required>
 
-        <input class="footer__form-input" name="email" type="email" placeholder="Email*" required>
+          <input class="footer__form-input" name="email" type="email" placeholder="Email*" required>
 
-        <textarea class="footer__form-input footer__form-input-message" name="message" placeholder="Сообщение" rows="4"></textarea>
+          <textarea class="footer__form-input footer__form-input-message" name="message" placeholder="Сообщение" rows="4"></textarea>
 
-        <div class="footer__form-submit-group">
-          <button class="footer__form-submit btn btn-orange">Отправить данные</button>
+          <div class="footer__form-submit-group">
+            <button class="footer__form-submit btn btn-orange">Отправить данные</button>
 
-          <label class="footer__form-agreement-checkbox common-text">
-            <input class="footer__form-agreement-checkbox-input" name="agree" type="checkbox">
-            <span class="footer__form-agreement-checkbox-text">Согласен на обработку данных</span>
-          </label>
+            <label class="footer__form-agreement-checkbox common-text">
+              <input class="footer__form-agreement-checkbox-input" name="agree" type="checkbox">
+              <span class="footer__form-agreement-checkbox-text">Согласен на обработку данных</span>
+            </label>
 
+          </div>
         </div>
       </form>
 
-      <p class="footer__comment common-text">
-        Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с&nbsp;широким активом обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании стандартных подходов.
-      </p>
+      <div class="footer__comment">
+        <p class="footer__comment-text common-text">
+          Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с&nbsp;широким активом обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании стандартных подходов.
+        </p>
+      </div>
     </div>
   </footer>
 </body>
